@@ -26,6 +26,9 @@ app.use(express.json());
 // routes
 app.use("/api/auth", authRoutes);
 
+app.get("/", (req, res) => {
+  res.send("JWT Authentication on live...");
+});
 
 // server
 app.listen(process.env.PORT, () => {
