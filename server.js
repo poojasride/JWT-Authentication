@@ -18,15 +18,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// routes
-app.use("/api/auth", authRoutes);
-
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+
+// routes
+app.use("/api/auth", authRoutes);
 
 // server
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
-
