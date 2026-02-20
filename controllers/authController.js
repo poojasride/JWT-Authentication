@@ -93,7 +93,7 @@ export const getProfile = async (req, res) => {
 
   res.json({
 
-    message: "Protected data",
+    message: "Protected user data",
 
     user: req.user,
 
